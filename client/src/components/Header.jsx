@@ -9,11 +9,10 @@ function Header() {
     const path = useLocation().pathname;
 
     return (
-        <Navbar className='border-b-2'>
+        <Navbar className='border-b-2 border-orange-400 bg-red-500'>
             <Link to="/" className='self-center whitespace-nowrap text-sm
             sm:text-xl font-semibold dark:text-white'>
-                <span className='px-2 py-1 bg-gradient-to-r from-indigo-500
-                via-purple-500 to-pink-500 rounded-lg text-white'>Tech Blog</span>
+                <span className='px-3 py-2 bg-blue-500 text-white rounded-lg'>Tech Blog</span>
             </Link>
             <form>
                 <TextInput
@@ -39,7 +38,7 @@ function Header() {
                     {/* {theme === 'light' ? <FaSun /> : <FaMoon />} */}
                 </Button>
                 <Link to='/sign-in'>
-                    <Button gradientDuoTone='purpleToBlue'>
+                    <Button color="blue">
                         Sign In
                     </Button>
                 </Link>
