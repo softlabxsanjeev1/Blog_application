@@ -65,6 +65,8 @@ export const deleteUser = async (req, res, next) => {
     }
 };
 
+
+// sign out user
 export const signout = (req, res, next) => {
     try {
         res
@@ -76,6 +78,8 @@ export const signout = (req, res, next) => {
     }
 };
 
+
+// get all Users 
 export const getUsers = async (req, res, next) => {
     if (!req.user.isAdmin) {
         return next(errorHandler(403, 'You are not allowed to see all users'));
@@ -118,6 +122,8 @@ export const getUsers = async (req, res, next) => {
     }
 };
 
+
+// get particular user 
 export const getUser = async (req, res, next) => {
     try {
         const user = await User.findById(req.params.userId);
